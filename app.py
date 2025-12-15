@@ -27,10 +27,11 @@ def download():
     output_path = f"{DOWNLOAD_DIR}/{file_id}.mp4"
 
     ydl_opts = {
-        "outtmpl": output_path,
-        "format": "bestvideo+bestaudio/best",
-        "merge_output_format": "mp4",
-        "quiet": True
+    "outtmpl": output_path,
+    "format": "bestvideo+bestaudio/best",
+    "merge_output_format": "mp4",
+    "cookies": "cookies.txt",
+    "quiet": True
     }
 
     try:
@@ -57,3 +58,4 @@ def download():
 
 if __name__ == "__main__":
     app.run()
+
